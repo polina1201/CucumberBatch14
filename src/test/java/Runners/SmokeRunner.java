@@ -18,11 +18,13 @@ import org.junit.runner.RunWith;
 
 
         dryRun = false,
-        tags = "@sprint4",
+        tags = "@tc1101",
         //to remove irrelevant information from console, you need to set monochrome to true.
         monochrome=true,
-        plugin = {"pretty"}
+
         //pretty keyword prints the steps in the console to increase readability
+        //to generate the reports we need plugin of runner class
+        plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json"}
 
 )
 

@@ -29,3 +29,17 @@ Feature: Add Employee
       |gulnam     |mazar     |
       |rampal     |chambel   |
       |azam       |asel      |
+
+
+    @datatable
+    Scenario: Adding multiple employees using data table
+      When user adds multiple employees and verify they are added successfully
+      |firstName|middleName|lastName|
+      |zara     |MS        |camilullah|
+      |birgul   |MS        |ozgin     |
+      |alina    |MS        |bob       |
+
+
+      @excel
+      Scenario: Adding multiple employees using excel file
+        When user adds multiple employee from excel using "EmployeeData" and verify it
